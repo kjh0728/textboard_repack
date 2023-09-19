@@ -13,6 +13,13 @@ public class ArticleView {
             System.out.println("==============================");
             System.out.println("번호 : " + arr.get(i).getID());
             System.out.println("제목 : " + arr.get(i).getTitle());
+            if(detail)
+            {
+                System.out.println("내용 : " + arr.get(i).getContent());
+                System.out.println("등록일 : " + Util.getCurrentTime(arr.get(i).getAddTime()));
+                System.out.println("조회수 : " + arr.get(i).getView_num());
+                System.out.println("추천수 : " + arr.get(i).getGood());
+            }
         }
         System.out.println("==============================");
     }

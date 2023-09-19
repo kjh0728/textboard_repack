@@ -2,20 +2,33 @@ package Model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArticleRepository {
 
     static ArrayList<Article> art_arr = new ArrayList<Article>();
 
 
+    public void addTest()
+    {
+        for(int i = 1; i < 20; i++)
+        {
+            art_arr.add(new Article(i, "123", Integer.toString(i),Integer.toString(i),LocalDateTime.now()));
+        }
+    }
+
+    public int getSize()
+    {
+        return art_arr.size();
+    }
     public ArrayList<Article> All_art()
     {
         return art_arr;
     }
 
-    public void add(String title, String content)
+    public void add(String mem_ID, String title, String content)
     {
-        art_arr.add(new Article(art_arr.size() + 1, title, content, LocalDateTime.now()));
+        art_arr.add(new Article(art_arr.size() + 1, mem_ID, title, content, LocalDateTime.now()));
     }
 
     public void delete(Article art)

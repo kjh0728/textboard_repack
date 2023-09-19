@@ -5,6 +5,10 @@ import java.time.format.DateTimeFormatter;
 
 public class Util {
     public static final int INT_FAIL = -1;
+    public static final int PAGE_RANGE = 3;
+    public static final int PAGE_BLOCK_RANGE = 5;
+
+
     public static String getCurrentTime(LocalDateTime time)
     {
         return DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(time);
